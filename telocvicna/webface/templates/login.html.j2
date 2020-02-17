@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Tělocvična</title>
+    <meta charset="utf-8" /> 
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favico.png') }}" />
+</head>
+{% block obsah %}
+ <body>
+<p1 align="center">
+<h1>Login</h1>
+<form method="post">
+
+    <input name="login" type="text" method="post" placeholder="Username"/></br></br>
+    <input name="password" type="text" method="post" placeholder="Password"/></br></br>
+    <button> Odešli to!</button>
+</form>
+</p1>
+{% for message in get_flashed_messages() %}
+    <p2 class ="flash">{{ message }}</p2>
+  {%endfor%}
+ </body>
+{% endblock obsah %}
+
+
+ </html>
